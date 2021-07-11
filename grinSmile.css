@@ -1,0 +1,58 @@
+   html {
+       background-color: white;
+   }
+   
+   header {
+       position: fixed;
+       top: 0;
+       width: 70%;
+       display: grid;
+       background: rgb(110, 110, 219);
+       grid-template-columns: 1fr 1.20fr;
+       grid-template-rows: 1fr 50px;
+       gap: 3em;
+       row-gap: 0px;
+       text-align: left;
+   }
+   
+   body {
+       margin: 0px 10%;
+       padding: 0px 5%;
+       background-color: rgb(110, 110, 219);
+   }
+   
+   li {
+       display: inline-block;
+       font-family: 'Suez One', serif;
+       font-size: 2em;
+   }
+   
+   h1 {
+       font-family: 'Suez One', serif;
+       font-size: 3em;
+   }
+   
+   header h2 {
+       font-family: 'Suez One', serif;
+       grid-row: 2;
+       margin: 0px;
+   }
+   /*ul {
+    display: grid;
+    grid-template-columns: min-content min-content max-content;
+    gap: 1em;
+    padding: 0px;
+}*/
+   
+   ul {
+       padding: 2em;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       padding-inline-start: 0px;
+   }
+   
+   a {
+       text-decoration: none;
+       color: rgb(4, 27, 53);
+   }
