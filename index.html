@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dovid Brailofsky</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        $(function() {
+            $(".box").draggable();
+        });
+    </script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+        body {
+            margin: 0;
+        }
+        
+        #backg {
+            width: 100%;
+            height: 100vh;
+            background-image: url('media/cool-background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Raleway, Open Sans, Droid Sans, Roboto, arial, sans-serif;
+        }
+        
+        .blurred-bg {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url('media/cool-background-blur.png');
+            background-size: 100%;
+        }
+        
+        .box {
+            width: 550px;
+            height: 300px;
+            left: -webkit-calc( 50% - 250px);
+            top: 30%;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            transition: box-shadow .3s ease;
+            cursor: grab;
+        }
+        
+        .box:active {
+            cursor: grabbing;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-weight: 400;
+            vertical-align: middle;
+        }
+        
+        .tinted h1,
+        .tinted h2,
+        .tinted a,
+        .tinted p {
+            color: black;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+        }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+        }
+        
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+        
+        .tooltiptext {
+            width: 1500px;
+        }
+        
+        blockquote p {
+            display: inline-block;
+        }
+        
+        blockquote p a {
+            color: yellow;
+        }
+        
+        #quote {
+            margin: 0;
+        }
+        
+        .wrapper h1 {
+            color: #fff;
+            text-transform: uppercase;
+            background: linear-gradient(to left, #ff0000 10%, #0011fc 30%, #33ff00 50%);
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 10s linear infinite reverse;
+            display: inline-block;
+        }
+        
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+        
+        #card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="backg">
+        <blockquote cite="https://www.uvu.edu/arts/applause/posts/stealing.html" class="tooltip">
+            <div class="wrapper">
+                <h1 id="quote"><q>Good artists borrow, Great artists steal</q></h1>
+            </div>
+
+            <p class="tooltiptext">“The quote in this form was a favorite of Steve Jobs but he but he was probably (mis)quoting Pablo Picasso who said “Lesser artists borrow; great artists steal” – who in turn might be rephrasing Igor Stravinsky, but both sayings may well originate
+                in T. S. Eliot’s dictum: “Immature poets imitate; mature poets steal; bad poets deface what they take, and good poets make it into something better, or at least something different. The good poet welds his theft into a whole of feeling
+                which is unique, utterly different than that from which it is torn.” – The origins of this quote itself is an example of great artists stealing.” - <a href="https://www.uvu.edu/arts/applause/posts/stealing.html">where I stole it from: (הגונב מן הגנב)</a></p>
+        </blockquote>
+        <div id="box1" class="box blurred-bg tinted">
+            <div>
+                <div id="card-header">
+                    <img src="media/cartoon_socialbook.png" alt="" width="70" height="70">
+                    <h1>And I'm Dovid Brailofsky... </h1>
+                </div>
+                <h2 style="margin-top: .5em">Entry level software and web developer.</h2>
+                <h3>Problem solver, code copy/paster.</h3>
+                <a href="https://www.linkedin.com/in/yehuda-b-013801178/">Linkedin</a>
+                <p>Drag this card to move it around.</p>
+                <a href="https://codepen.io/ariona/pen/geFIK" target="_blank">Code for card minified from Ariona Rian, on codepen.io</a>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
